@@ -1,0 +1,55 @@
+{
+  "name": "unifile-webdav",
+  "version": "1.0.0",
+  "description": "WebDav plugin for Unifile",
+  "main": "lib/unifile-webdav.js",
+  "author": "Jean-Baptiste Richardet <jeanbaptiste.richardet@gmail.com> (https://github.com/JbIPS)",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test/*.js -R nyan",
+    "watch": "mocha test/*.js -R min --watch",
+    "lint": "eslint test/*.js lib/*.js",
+    "cover": "nyc --reporter=lcov --check-coverage --branches 100 npm test",
+    "cover:export": "cat ./coverage/lcov.info | codacy-coverage",
+    "gen:docs": "jsdoc -R README.md -c jsdoc.json",
+    "preversion": "npm test && npm run lint && npm run gen:docs",
+    "version": "LIB_VERSION=$(env | grep npm_package_version | grep -v script | cut -d= -f2); sed -e \"s/Unreleased/$LIB_VERSION/\" -e \"s/HEAD/v$LIB_VERSION/\" -e \"/^## \\[$LIB_VERSION/ s/$/ - $(date +%Y-%m-%d)/\" CHANGELOG.md -i && git add docs CHANGELOG.md package.json",
+      "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silexlabs/unifile-webdav.git"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/silexlabs/unifile-webdav/issues"
+  },
+  "homepage": "https://github.com/silexlabs/unifile-webdav",
+  "keywords": [
+    "unifile,",
+    "webdav"
+  ],
+  "engines": {
+    "node": "^6.2.2",
+    "npm": "^3.9.5"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "request": "^2.83.0",
+    "unifile-common-tools": "^1.0.0",
+    "xml-stream": "^0.4.5"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "*",
+    "mocha": "*",
+    "nyc": "*",
+    "webdav-server": "^2.3.5"
+  }
+}
