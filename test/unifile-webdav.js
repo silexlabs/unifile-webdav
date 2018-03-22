@@ -216,6 +216,22 @@ describe('WebDAVConnector', function() {
 				expect(session.password).to.equal('admin');
 			});
 		});
+
+		it('accepts an object as login infos with protocol in host', function() {
+			const session = {};
+			return connector.login(session, {
+				host: 'http://127.0.0.1/',
+				port: '9876',
+				user: 'admin',
+				password: 'admin'
+			})
+			.then(() => {
+				expect(session.host).to.equal('http://127.0.0.1/');
+				expect(session.port).to.equal('9876');
+				expect(session.user).to.equal('admin');
+				expect(session.password).to.equal('admin');
+			});
+		});
 	});
 
 	describe('readdir()', function() {
