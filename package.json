@@ -14,7 +14,7 @@
     "gen:docs": "jsdoc -R README.md -c jsdoc.json",
     "preversion": "npm test && npm run lint && npm run gen:docs",
     "version": "LIB_VERSION=$(env | grep npm_package_version | grep -v script | cut -d= -f2); sed -e \"s/Unreleased/$LIB_VERSION/\" -e \"s/HEAD/v$LIB_VERSION/\" -e \"/^## \\[$LIB_VERSION/ s/$/ - $(date +%Y-%m-%d)/\" CHANGELOG.md -i && git add docs CHANGELOG.md package.json",
-      "postversion": "git push --follow-tags"
+    "postversion": "git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -47,7 +47,9 @@
   "devDependencies": {
     "chai": "*",
     "chai-as-promised": "^7.1.1",
+    "docdash": "^0.4.0",
     "eslint": "*",
+    "jsdoc": "^3.5.5",
     "mocha": "*",
     "nyc": "*",
     "webdav-server": "^2.3.5"
