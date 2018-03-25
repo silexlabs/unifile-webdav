@@ -5,3 +5,4 @@ coverage
 *.sw*
 .nyc_output
 *.tgz
+.vscode
