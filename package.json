@@ -39,20 +39,20 @@
     "npm": ">3.9.5"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "request": "^2.83.0",
+    "bluebird": "^3.7.2",
+    "request": "^2.88.2",
     "unifile-common-tools": "^1.0.0",
     "xml-stream": "^0.4.5"
   },
   "devDependencies": {
     "chai": "*",
     "chai-as-promised": "^7.1.1",
-    "cross-env": "^5.1.4",
-    "docdash": "^0.4.0",
+    "cross-env": "^7.0.2",
+    "docdash": "^1.2.0",
     "eslint": "*",
-    "jsdoc": "^3.5.5",
+    "jsdoc": "^3.6.6",
     "mocha": "*",
     "nyc": "*",
-    "webdav-server": "^2.3.5"
+    "webdav-server": "^2.6.2"
   }
 }
