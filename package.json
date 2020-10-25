@@ -35,8 +35,8 @@
     "webdav"
   ],
   "engines": {
-    "node": "^6.2.2",
-    "npm": "^3.9.5"
+    "node": ">6.2.2",
+    "npm": ">3.9.5"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
