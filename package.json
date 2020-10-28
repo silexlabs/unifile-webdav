@@ -41,7 +41,7 @@
   "dependencies": {
     "bluebird": "^3.7.2",
     "request": "^2.88.2",
-    "unifile-common-tools": "^1.0.1",
+    "unifile-common-tools": "^1.0.3",
     "xml-stream": "^0.4.5"
   },
   "devDependencies": {
