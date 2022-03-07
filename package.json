@@ -6,6 +6,7 @@
   "author": "Jean-Baptiste Richardet <jeanbaptiste.richardet@gmail.com> (https://github.com/JbIPS)",
   "license": "MIT",
   "scripts": {
+    "release": "",
     "test": "mocha test/*.js",
     "build": "echo NO BUILD STEP",
     "watch": "mocha test/*.js -R min --watch",
