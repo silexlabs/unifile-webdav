@@ -47,14 +47,14 @@
     "xml-stream": "^0.4.5"
   },
   "devDependencies": {
-    "chai": "*",
+    "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "cross-env": "^7.0.2",
     "docdash": "^1.2.0",
-    "eslint": "*",
+    "eslint": "^6.8.0",
     "jsdoc": "^3.6.6",
-    "mocha": "*",
-    "nyc": "*",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
     "webdav-server": "^2.6.2"
   }
 }
