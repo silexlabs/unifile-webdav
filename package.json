@@ -1,6 +1,6 @@
 {
   "name": "unifile-webdav",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "WebDav plugin for Unifile",
   "main": "lib/unifile-webdav.js",
   "author": "Jean-Baptiste Richardet <jeanbaptiste.richardet@gmail.com> (https://github.com/JbIPS)",
